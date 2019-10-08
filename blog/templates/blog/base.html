@@ -1,0 +1,20 @@
+{% load static %}
+<!--导入由django.contrib.staticfiles应用提供的static模板标签，导入之后，在整个当前模板中都可以使用/{/%static/%/}标签从而导入静态文件例如blog.css -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <!--link rel="stylesheet" href="{% static "css/blog.css" %}"-->
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>My blog</h2>
+        <p>This is my blog.</p>
+    </div>
+</body>
+</html>
