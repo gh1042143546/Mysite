@@ -12,10 +12,10 @@ def post_list(request):
     try:
         posts = paginator.page(page)
     except PageNotAnInteger:
-
+        # 如果page参数不是一个整数就返回第一页
         posts = paginator.page(1)
     except EmptyPage:
-
+        # 如果页数超出总页数就返回最后一页
         posts = paginator.page(paginator.num_pages)
     return render(request,'blog/post/list.html',{'page':page,"posts":posts})
 
