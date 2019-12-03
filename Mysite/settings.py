@@ -119,11 +119,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_URL = '/static/'
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-#邮件服务
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 把所有的邮件内容显示在控制台，便于测试
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_HOST_USER = '1042143546@qq.com'
 EMAIL_HOST_PASSWORD = 'hxgtjcaubjzdbfdd'
 EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_USE_TLS = True #是否使用TLS进行连接
+EMAIL_USE_SSL = False #是否使用SSL进行连接

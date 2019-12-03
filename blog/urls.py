@@ -6,4 +6,5 @@ urlpatterns = [
     path('',views.post_list,name='post_list'),
     path('<int:year>/<int:month>/<int:day>/<slug:post>/', views.post_detail, name='post_detail'),
     #尖括号从URL中获取这些参数
+    path('<int:post_id>/share/', views.post_share, name='post_share'),
 ]
